@@ -23,6 +23,13 @@ class PointsController < ApplicationController
       puts key.to_i.inspect
       @score[key] = val.to_i - @awards[key].to_i
     end
+    
+    @participants.each do |p|
+      p.score = @score[p.id].nil? ? 0 : @score[p.id]
+    end
+    @participants.sort! { |a,b| b.score <=> a.score }
+    
+    
 
     respond_to do |format|
       format.html # index.html.erb

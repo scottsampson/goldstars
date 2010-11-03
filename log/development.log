@@ -6372,3 +6372,396 @@ Started GET "/admin/points" for 127.0.0.1 at Wed Nov 03 14:29:27 -0400 2010
 Rendered admin/shared/_nav.html.erb (2.1ms)
 Rendered admin/points/index.html.erb within layouts/admin (115.8ms)
 Completed 200 OK in 146ms (Views: 120.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/points" for 127.0.0.1 at Wed Nov 03 14:42:38 -0400 2010
+  Processing by Admin::PointsController#index as HTML
+  [1m[35mPoint Load (0.5ms)[0m  SELECT `points`.* FROM `points`
+  [1m[36mParticipant Load (3.0ms)[0m  [1mSELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 1) LIMIT 1[0m
+  [1m[35mPointType Load (0.4ms)[0m  SELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1
+  [1m[36mParticipant Load (0.3ms)[0m  [1mSELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 6) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1
+Rendered admin/shared/_nav.html.erb (1.8ms)
+Rendered admin/points/index.html.erb within layouts/admin (117.6ms)
+Completed 200 OK in 146ms (Views: 117.7ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/admin/points" for 127.0.0.1 at Wed Nov 03 14:42:39 -0400 2010
+  Processing by Admin::PointsController#index as HTML
+  [1m[36mPoint Load (0.3ms)[0m  [1mSELECT `points`.* FROM `points`[0m
+  [1m[35mParticipant Load (0.2ms)[0m  SELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 1) LIMIT 1
+  [1m[36mPointType Load (0.3ms)[0m  [1mSELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1[0m
+  [1m[35mParticipant Load (0.3ms)[0m  SELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 6) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1[0m
+Rendered admin/shared/_nav.html.erb (3.0ms)
+Rendered admin/points/index.html.erb within layouts/admin (77.6ms)
+Completed 200 OK in 155ms (Views: 82.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/points" for 127.0.0.1 at Wed Nov 03 14:42:40 -0400 2010
+  Processing by Admin::PointsController#index as HTML
+  [1m[35mPoint Load (0.3ms)[0m  SELECT `points`.* FROM `points`
+  [1m[36mParticipant Load (0.3ms)[0m  [1mSELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 1) LIMIT 1[0m
+  [1m[35mPointType Load (0.5ms)[0m  SELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1
+  [1m[36mParticipant Load (2.7ms)[0m  [1mSELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 6) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1
+Rendered admin/shared/_nav.html.erb (2.1ms)
+Rendered admin/points/index.html.erb within layouts/admin (258.7ms)
+Completed 200 OK in 286ms (Views: 258.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/admin/points" for 127.0.0.1 at Wed Nov 03 14:43:18 -0400 2010
+  Processing by Admin::PointsController#index as HTML
+  [1m[36mPoint Load (0.3ms)[0m  [1mSELECT `points`.* FROM `points`[0m
+  [1m[35mParticipant Load (0.2ms)[0m  SELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 1) LIMIT 1
+  [1m[36mPointType Load (0.7ms)[0m  [1mSELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1[0m
+  [1m[35mParticipant Load (0.4ms)[0m  SELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 6) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1[0m
+Rendered admin/shared/_nav.html.erb (1.7ms)
+Rendered admin/points/index.html.erb within layouts/admin (76.4ms)
+Completed 200 OK in 104ms (Views: 78.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/points" for 127.0.0.1 at Wed Nov 03 14:43:19 -0400 2010
+  Processing by Admin::PointsController#index as HTML
+  [1m[35mPoint Load (0.3ms)[0m  SELECT `points`.* FROM `points`
+  [1m[36mParticipant Load (0.2ms)[0m  [1mSELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 1) LIMIT 1[0m
+  [1m[35mPointType Load (0.8ms)[0m  SELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1
+  [1m[36mParticipant Load (0.3ms)[0m  [1mSELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 6) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1
+Rendered admin/shared/_nav.html.erb (1.8ms)
+Rendered admin/points/index.html.erb within layouts/admin (69.8ms)
+Completed 200 OK in 99ms (Views: 72.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/points" for 127.0.0.1 at Wed Nov 03 14:43:19 -0400 2010
+  Processing by Admin::PointsController#index as HTML
+  [1m[36mPoint Load (2.6ms)[0m  [1mSELECT `points`.* FROM `points`[0m
+  [1m[35mParticipant Load (0.7ms)[0m  SELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 1) LIMIT 1
+  [1m[36mPointType Load (0.3ms)[0m  [1mSELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1[0m
+  [1m[35mParticipant Load (0.3ms)[0m  SELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 6) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1[0m
+Rendered admin/shared/_nav.html.erb (1.8ms)
+Rendered admin/points/index.html.erb within layouts/admin (75.6ms)
+Completed 200 OK in 161ms (Views: 78.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/admin/points" for 127.0.0.1 at Wed Nov 03 14:43:28 -0400 2010
+  Processing by Admin::PointsController#index as HTML
+  [1m[35mPoint Load (0.9ms)[0m  SELECT `points`.* FROM `points`
+  [1m[36mParticipant Load (0.7ms)[0m  [1mSELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 1) LIMIT 1[0m
+  [1m[35mPointType Load (0.7ms)[0m  SELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1
+  [1m[36mParticipant Load (0.3ms)[0m  [1mSELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 6) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1
+Rendered admin/shared/_nav.html.erb (1.8ms)
+Rendered admin/points/index.html.erb within layouts/admin (118.5ms)
+Completed 200 OK in 148ms (Views: 120.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/points" for 127.0.0.1 at Wed Nov 03 14:43:29 -0400 2010
+  Processing by Admin::PointsController#index as HTML
+  [1m[36mPoint Load (0.3ms)[0m  [1mSELECT `points`.* FROM `points`[0m
+  [1m[35mParticipant Load (0.3ms)[0m  SELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 1) LIMIT 1
+  [1m[36mPointType Load (3.9ms)[0m  [1mSELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1[0m
+  [1m[35mParticipant Load (0.6ms)[0m  SELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 6) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1[0m
+Rendered admin/shared/_nav.html.erb (1.7ms)
+Rendered admin/points/index.html.erb within layouts/admin (90.7ms)
+Completed 200 OK in 120ms (Views: 89.8ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/admin/points" for 127.0.0.1 at Wed Nov 03 14:43:30 -0400 2010
+  Processing by Admin::PointsController#index as HTML
+  [1m[35mPoint Load (2.4ms)[0m  SELECT `points`.* FROM `points`
+  [1m[36mParticipant Load (0.3ms)[0m  [1mSELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 1) LIMIT 1[0m
+  [1m[35mPointType Load (0.3ms)[0m  SELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1
+  [1m[36mParticipant Load (0.3ms)[0m  [1mSELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 6) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1
+Rendered admin/shared/_nav.html.erb (1.8ms)
+Rendered admin/points/index.html.erb within layouts/admin (76.7ms)
+Completed 200 OK in 127ms (Views: 79.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/admin/points" for 127.0.0.1 at Wed Nov 03 14:43:31 -0400 2010
+  Processing by Admin::PointsController#index as HTML
+  [1m[36mPoint Load (24.6ms)[0m  [1mSELECT `points`.* FROM `points`[0m
+  [1m[35mParticipant Load (0.4ms)[0m  SELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 1) LIMIT 1
+  [1m[36mPointType Load (0.3ms)[0m  [1mSELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1[0m
+  [1m[35mParticipant Load (0.3ms)[0m  SELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 6) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1[0m
+Rendered admin/shared/_nav.html.erb (1.8ms)
+Rendered admin/points/index.html.erb within layouts/admin (83.9ms)
+Completed 200 OK in 136ms (Views: 86.7ms | ActiveRecord: 25.7ms)
+
+
+Started GET "/admin/points" for 127.0.0.1 at Wed Nov 03 14:43:43 -0400 2010
+  Processing by Admin::PointsController#index as HTML
+  [1m[35mPoint Load (0.4ms)[0m  SELECT `points`.* FROM `points`
+  [1m[36mParticipant Load (1.1ms)[0m  [1mSELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 1) LIMIT 1[0m
+  [1m[35mPointType Load (0.4ms)[0m  SELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1
+  [1m[36mParticipant Load (0.3ms)[0m  [1mSELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 6) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1
+Rendered admin/shared/_nav.html.erb (1.8ms)
+Rendered admin/points/index.html.erb within layouts/admin (122.6ms)
+Completed 200 OK in 151ms (Views: 124.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/points" for 127.0.0.1 at Wed Nov 03 14:43:44 -0400 2010
+  Processing by Admin::PointsController#index as HTML
+  [1m[36mPoint Load (0.4ms)[0m  [1mSELECT `points`.* FROM `points`[0m
+  [1m[35mParticipant Load (0.7ms)[0m  SELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 1) LIMIT 1
+  [1m[36mPointType Load (0.7ms)[0m  [1mSELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1[0m
+  [1m[35mParticipant Load (0.3ms)[0m  SELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 6) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1[0m
+Rendered admin/shared/_nav.html.erb (2.2ms)
+Rendered admin/points/index.html.erb within layouts/admin (78.4ms)
+Completed 200 OK in 106ms (Views: 80.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/points" for 127.0.0.1 at Wed Nov 03 14:43:45 -0400 2010
+  Processing by Admin::PointsController#index as HTML
+  [1m[35mPoint Load (0.3ms)[0m  SELECT `points`.* FROM `points`
+  [1m[36mParticipant Load (0.4ms)[0m  [1mSELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 1) LIMIT 1[0m
+  [1m[35mPointType Load (2.1ms)[0m  SELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1
+  [1m[36mParticipant Load (0.3ms)[0m  [1mSELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 6) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1
+Rendered admin/shared/_nav.html.erb (2.4ms)
+Rendered admin/points/index.html.erb within layouts/admin (76.2ms)
+Completed 200 OK in 108ms (Views: 78.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/admin/points" for 127.0.0.1 at Wed Nov 03 14:43:46 -0400 2010
+  Processing by Admin::PointsController#index as HTML
+  [1m[36mPoint Load (0.3ms)[0m  [1mSELECT `points`.* FROM `points`[0m
+  [1m[35mParticipant Load (0.3ms)[0m  SELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 1) LIMIT 1
+  [1m[36mPointType Load (0.3ms)[0m  [1mSELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1[0m
+  [1m[35mParticipant Load (0.3ms)[0m  SELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 6) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1[0m
+Rendered admin/shared/_nav.html.erb (2.0ms)
+Rendered admin/points/index.html.erb within layouts/admin (74.0ms)
+Completed 200 OK in 103ms (Views: 77.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/points" for 127.0.0.1 at Wed Nov 03 14:43:47 -0400 2010
+  Processing by Admin::PointsController#index as HTML
+  [1m[35mPoint Load (0.3ms)[0m  SELECT `points`.* FROM `points`
+  [1m[36mParticipant Load (0.7ms)[0m  [1mSELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 1) LIMIT 1[0m
+  [1m[35mPointType Load (0.3ms)[0m  SELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1
+  [1m[36mParticipant Load (0.5ms)[0m  [1mSELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 6) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `point_types`.* FROM `point_types` WHERE (`point_types`.`id` = 1) LIMIT 1
+Rendered admin/shared/_nav.html.erb (2.1ms)
+Rendered admin/points/index.html.erb within layouts/admin (128.9ms)
+Completed 200 OK in 159ms (Views: 131.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Nov 03 15:17:16 -0400 2010
+  Processing by PointsController#index as HTML
+  [1m[36mPoint Load (0.4ms)[0m  [1mselect sum(b.value) points,a.participant_id
+ from points a,point_types b
+ where a.point_type_id = b.id
+ group by (a.participant_id)[0m
+  [1m[35mAward Load (0.4ms)[0m  select sum(b.num_points) cashed,a.participant_id 
+ from awards a,award_types b 
+ where a.award_type_id = b.id 
+ group by (a.participant_id)
+  [1m[36mParticipant Load (0.8ms)[0m  [1mSELECT `participants`.* FROM `participants`[0m
+Completed   in 77ms
+
+NoMethodError (undefined method `sort!' for {6=>-197, 1=>3}:Hash):
+  app/controllers/points_controller.rb:26:in `index'
+
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (81.5ms)
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (89.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Nov 03 15:21:30 -0400 2010
+  Processing by PointsController#index as HTML
+  [1m[35mPoint Load (0.5ms)[0m  select sum(b.value) points,a.participant_id
+ from points a,point_types b
+ where a.point_type_id = b.id
+ group by (a.participant_id)
+  [1m[36mAward Load (0.6ms)[0m  [1mselect sum(b.num_points) cashed,a.participant_id 
+ from awards a,award_types b 
+ where a.award_type_id = b.id 
+ group by (a.participant_id)[0m
+  [1m[35mParticipant Load (0.3ms)[0m  SELECT `participants`.* FROM `participants`
+Rendered points/index.html.erb within layouts/application (29.2ms)
+Completed   in 108ms
+
+ActionView::Template::Error (undefined local variable or method `participants' for #<#<Class:0x25644f4>:0x256352c>):
+    10:   </tr>
+    11:   -->
+    12: <% @score.sort.each do |key,val| %>
+    13:   <%- participant =  participants %>
+    14:   <tr>
+    15:     <td class="name"><%= participant.name %></td>
+    16:     <td class="score"><%= @score[participant.id].nil? ? 0 : @score[participant.id] %></td>
+  app/views/points/index.html.erb:13:in `_app_views_points_index_html_erb__1021031660_19599330_0'
+  app/views/points/index.html.erb:12:in `each'
+  app/views/points/index.html.erb:12:in `_app_views_points_index_html_erb__1021031660_19599330_0'
+  app/controllers/points_controller.rb:32:in `index'
+
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.4ms)
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Nov 03 15:21:52 -0400 2010
+  Processing by PointsController#index as HTML
+  [1m[36mPoint Load (0.5ms)[0m  [1mselect sum(b.value) points,a.participant_id
+ from points a,point_types b
+ where a.point_type_id = b.id
+ group by (a.participant_id)[0m
+  [1m[35mAward Load (1.1ms)[0m  select sum(b.num_points) cashed,a.participant_id 
+ from awards a,award_types b 
+ where a.award_type_id = b.id 
+ group by (a.participant_id)
+  [1m[36mParticipant Load (0.3ms)[0m  [1mSELECT `participants`.* FROM `participants`[0m
+Rendered points/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 160ms (Views: 6.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Nov 03 15:22:54 -0400 2010
+  Processing by PointsController#index as HTML
+  [1m[35mPoint Load (1.4ms)[0m  select sum(b.value) points,a.participant_id
+ from points a,point_types b
+ where a.point_type_id = b.id
+ group by (a.participant_id)
+  [1m[36mAward Load (1.2ms)[0m  [1mselect sum(b.num_points) cashed,a.participant_id 
+ from awards a,award_types b 
+ where a.award_type_id = b.id 
+ group by (a.participant_id)[0m
+  [1m[35mParticipant Load (0.3ms)[0m  SELECT `participants`.* FROM `participants`
+Completed   in 80ms
+
+ArgumentError (comparison of Participant with Participant failed):
+  app/controllers/points_controller.rb:30:in `sort!'
+  app/controllers/points_controller.rb:30:in `index'
+
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.6ms)
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Nov 03 15:23:12 -0400 2010
+  Processing by PointsController#index as HTML
+  [1m[36mPoint Load (0.5ms)[0m  [1mselect sum(b.value) points,a.participant_id
+ from points a,point_types b
+ where a.point_type_id = b.id
+ group by (a.participant_id)[0m
+  [1m[35mAward Load (0.6ms)[0m  select sum(b.num_points) cashed,a.participant_id 
+ from awards a,award_types b 
+ where a.award_type_id = b.id 
+ group by (a.participant_id)
+  [1m[36mParticipant Load (0.3ms)[0m  [1mSELECT `participants`.* FROM `participants`[0m
+Completed   in 84ms
+
+ArgumentError (comparison of Participant with Participant failed):
+  app/controllers/points_controller.rb:31:in `sort!'
+  app/controllers/points_controller.rb:31:in `index'
+
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.9ms)
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Nov 03 15:23:36 -0400 2010
+  Processing by PointsController#index as HTML
+  [1m[35mPoint Load (0.5ms)[0m  select sum(b.value) points,a.participant_id
+ from points a,point_types b
+ where a.point_type_id = b.id
+ group by (a.participant_id)
+  [1m[36mAward Load (2.6ms)[0m  [1mselect sum(b.num_points) cashed,a.participant_id 
+ from awards a,award_types b 
+ where a.award_type_id = b.id 
+ group by (a.participant_id)[0m
+  [1m[35mParticipant Load (0.7ms)[0m  SELECT `participants`.* FROM `participants`
+Rendered points/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 103ms (Views: 7.1ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Nov 03 15:23:46 -0400 2010
+  Processing by PointsController#index as HTML
+  [1m[36mPoint Load (0.5ms)[0m  [1mselect sum(b.value) points,a.participant_id
+ from points a,point_types b
+ where a.point_type_id = b.id
+ group by (a.participant_id)[0m
+  [1m[35mAward Load (1.3ms)[0m  select sum(b.num_points) cashed,a.participant_id 
+ from awards a,award_types b 
+ where a.award_type_id = b.id 
+ group by (a.participant_id)
+  [1m[36mParticipant Load (0.3ms)[0m  [1mSELECT `participants`.* FROM `participants`[0m
+Completed   in 79ms
+
+NoMethodError (undefined method `>' for false:FalseClass):
+  app/controllers/points_controller.rb:30:in `sort!'
+  app/controllers/points_controller.rb:30:in `index'
+
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.6ms)
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Nov 03 15:23:53 -0400 2010
+  Processing by PointsController#index as HTML
+  [1m[35mPoint Load (0.5ms)[0m  select sum(b.value) points,a.participant_id
+ from points a,point_types b
+ where a.point_type_id = b.id
+ group by (a.participant_id)
+  [1m[36mAward Load (0.4ms)[0m  [1mselect sum(b.num_points) cashed,a.participant_id 
+ from awards a,award_types b 
+ where a.award_type_id = b.id 
+ group by (a.participant_id)[0m
+  [1m[35mParticipant Load (0.5ms)[0m  SELECT `participants`.* FROM `participants`
+Completed   in 73ms
+
+NoMethodError (undefined method `>' for false:FalseClass):
+  app/controllers/points_controller.rb:30:in `sort!'
+  app/controllers/points_controller.rb:30:in `index'
+
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.6ms)
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Nov 03 15:23:58 -0400 2010
+  Processing by PointsController#index as HTML
+  [1m[36mPoint Load (0.5ms)[0m  [1mselect sum(b.value) points,a.participant_id
+ from points a,point_types b
+ where a.point_type_id = b.id
+ group by (a.participant_id)[0m
+  [1m[35mAward Load (0.6ms)[0m  select sum(b.num_points) cashed,a.participant_id 
+ from awards a,award_types b 
+ where a.award_type_id = b.id 
+ group by (a.participant_id)
+  [1m[36mParticipant Load (0.7ms)[0m  [1mSELECT `participants`.* FROM `participants`[0m
+Rendered points/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 82ms (Views: 7.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Nov 03 15:24:45 -0400 2010
+
+SyntaxError (/Library/WebServer/Documents/goldstars/app/controllers/points_controller.rb:30: syntax error, unexpected tNEQ
+    @participants.sort! { |a,b| a.score <!=> b.score }
+                                           ^):
+  
+
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Nov 03 15:27:09 -0400 2010
+  Processing by PointsController#index as HTML
+  [1m[35mPoint Load (0.5ms)[0m  select sum(b.value) points,a.participant_id
+ from points a,point_types b
+ where a.point_type_id = b.id
+ group by (a.participant_id)
+  [1m[36mAward Load (0.7ms)[0m  [1mselect sum(b.num_points) cashed,a.participant_id 
+ from awards a,award_types b 
+ where a.award_type_id = b.id 
+ group by (a.participant_id)[0m
+  [1m[35mParticipant Load (0.3ms)[0m  SELECT `participants`.* FROM `participants`
+Rendered points/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 84ms (Views: 7.7ms | ActiveRecord: 1.4ms)
