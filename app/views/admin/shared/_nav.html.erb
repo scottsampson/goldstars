@@ -1,0 +1,9 @@
+<ul id="navigation">
+  <li><%= link_to 'Participants', admin_participants_path, :class => ( "on" if current_tab?('participants') ) %></li>
+  <li><%= link_to 'Point Types', admin_point_types_path, :class => ( "on" if current_tab?('point_types') ) %></li>
+  <li><%= link_to 'Points', admin_points_path, :class => ( "on" if current_tab?('points') ) %></li>
+  <li><%= link_to 'Award Types', admin_award_types_path, :class => ( "on" if current_tab?('award_types') ) %></li>
+  <li><%= link_to 'Awards', admin_awards_path, :class => ( "on" if current_tab?('awards') ) %></li>
+  <li><%= link_to 'Roles', admin_roles_path, :class => ( "on" if current_tab?('roles') ) %></li>
+</ul>
+<div class="clear">&nbsp;</div>

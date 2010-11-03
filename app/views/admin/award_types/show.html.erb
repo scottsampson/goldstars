@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @award_type.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @award_type.description %>
+</p>
+
+<p>
+  <b>Num points:</b>
+  <%= @award_type.num_points %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_award_type_path(@award_type) %> |
+<%= link_to 'Back', admin_award_types_path %>

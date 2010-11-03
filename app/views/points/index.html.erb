@@ -1,0 +1,27 @@
+<h1>Gold Freaking Stars!</h1>
+<table id="display">
+  <!--
+  <tr>
+    <th>Star leaders</th>
+    <th>Point type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  -->
+<% @participants.each do |participant| %>
+  <tr>
+    <td class="name"><%= participant.name %></td>
+    <td class="score"><%= @score[participant.id].nil? ? 0 : @score[participant.id] %></td>
+    <td class="stars">
+      <%- if !@score[participant.id].nil? && @score[participant.id] > 0   %>
+      
+        <%- for i in 1..@score[participant.id]  %>
+          <img src='images/star.png' />
+        <%- end  %>
+      <%- else  %>
+      <%- end  %>
+    </td>
+  </tr>
+<% end %>
+</table>

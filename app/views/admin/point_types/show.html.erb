@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @point_type.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @point_type.description %>
+</p>
+
+<p>
+  <b>Points:</b>
+  <%= @point_type.value %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_point_type_path(@point_type) %> |
+<%= link_to 'Back', admin_point_types_path %>

@@ -1,0 +1,25 @@
+<%= form_for([:admin,@award]) do |f| %>
+  <% if @award.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@award.errors.count, "error") %> prohibited this award from being saved:</h2>
+
+      <ul>
+      <% @award.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :participant_id, "Participant" %><br />
+    <%= f.select :participant_id, options_for_select(@participants.collect{|p| [p.name,p.id]}.sort,@award.participant_id) %>
+  </div>
+  <div class="field">
+    <%= f.label :award_type_id %><br />
+    <%= f.select :award_type_id, options_for_select(@award_types.collect{|at| [at.name,at.id]}.sort,@award.id) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
