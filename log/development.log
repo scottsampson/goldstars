@@ -7116,3 +7116,11 @@ Started GET "/points/rules" for 127.0.0.1 at Wed Nov 03 17:02:28 -0400 2010
   [1m[35mAwardType Load (0.5ms)[0m  SELECT `award_types`.* FROM `award_types`
 Rendered points/rules.html.erb within layouts/application (11.0ms)
 Completed 200 OK in 97ms (Views: 16.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/points/rules" for 127.0.0.1 at Wed Nov 03 17:05:59 -0400 2010
+  Processing by PointsController#rules as HTML
+  [1m[36mPointType Load (0.3ms)[0m  [1mSELECT `point_types`.* FROM `point_types`[0m
+  [1m[35mAwardType Load (0.3ms)[0m  SELECT `award_types`.* FROM `award_types`
+Rendered points/rules.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 44ms (Views: 14.9ms | ActiveRecord: 0.6ms)

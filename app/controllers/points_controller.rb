@@ -40,6 +40,8 @@ class PointsController < ApplicationController
   def rules
     @point_types = PointType.find(:all)
     @award_types = AwardType.find(:all)
+    @point_types.sort! { |a,b| a.name <=> b.name }
+    @award_types.sort! { |a,b| a.name <=> b.name }
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @points }
