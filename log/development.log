@@ -7124,3 +7124,135 @@ Started GET "/points/rules" for 127.0.0.1 at Wed Nov 03 17:05:59 -0400 2010
   [1m[35mAwardType Load (0.3ms)[0m  SELECT `award_types`.* FROM `award_types`
 Rendered points/rules.html.erb within layouts/application (10.3ms)
 Completed 200 OK in 44ms (Views: 14.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/participants" for 127.0.0.1 at Wed Nov 03 17:25:33 -0400 2010
+  Processing by Admin::ParticipantsController#index as HTML
+  [1m[36mParticipant Load (0.3ms)[0m  [1mSELECT `participants`.* FROM `participants`[0m
+  [1m[35mRole Load (0.6ms)[0m  SELECT `roles`.* FROM `roles` WHERE (`roles`.`id` = 1) LIMIT 1
+  [1m[36mRole Load (0.8ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (`roles`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (`roles`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (`roles`.`id` = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (`roles`.`id` = 1) LIMIT 1
+Rendered admin/shared/_nav.html.erb (2.0ms)
+Rendered admin/participants/index.html.erb within layouts/admin (50.4ms)
+Completed 200 OK in 156ms (Views: 54.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/participants/1/edit" for 127.0.0.1 at Wed Nov 03 17:25:35 -0400 2010
+  Processing by Admin::ParticipantsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParticipant Load (0.9ms)[0m  [1mSELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 1) LIMIT 1[0m
+Rendered admin/participants/_form.html.erb (44.9ms)
+Rendered admin/participants/edit.html.erb within layouts/admin (47.9ms)
+Completed   in 77ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.collect):
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :role_id %><br />
+    20:     <%= f.select :role_id, options_for_select(@roles.collect{|role| [role.role_name,role.id]}.sort) %>
+    21:   </div>
+    22:   <div class="actions">
+    23:     <%= f.submit %>
+  app/views/admin/participants/_form.html.erb:20:in `_app_views_admin_participants__form_html_erb__426248854_19354540_527776'
+  app/views/admin/participants/_form.html.erb:1:in `_app_views_admin_participants__form_html_erb__426248854_19354540_527776'
+  app/views/admin/participants/edit.html.erb:3:in `_app_views_admin_participants_edit_html_erb__19961920_19359750_0'
+
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.3ms)
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.9ms)
+
+
+Started GET "/admin/participants/1/edit" for 127.0.0.1 at Wed Nov 03 17:26:14 -0400 2010
+  Processing by Admin::ParticipantsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mParticipant Load (0.4ms)[0m  SELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 1) LIMIT 1
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+Rendered admin/participants/_form.html.erb (13.4ms)
+Rendered admin/participants/edit.html.erb within layouts/admin (24.3ms)
+Completed   in 93ms
+
+ActionView::Template::Error (undefined method `participant_path' for #<#<Class:0x25def4c>:0x25ddbd8>):
+    2: 
+    3: <%= render 'form' %>
+    4: 
+    5: <%= link_to 'Show', @participant %> |
+    6: <%= link_to 'Back', participants_path %>
+  app/views/admin/participants/edit.html.erb:5:in `_app_views_admin_participants_edit_html_erb__19961920_19850500_0'
+
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.7ms)
+Rendered /usr/local/rvm/gems/ruby-1.8.7-p174@goldstars/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.4ms)
+
+
+Started GET "/admin/participants/1/edit" for 127.0.0.1 at Wed Nov 03 17:26:33 -0400 2010
+  Processing by Admin::ParticipantsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mParticipant Load (0.5ms)[0m  SELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 1) LIMIT 1
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+Rendered admin/participants/_form.html.erb (13.1ms)
+Rendered admin/shared/_nav.html.erb (4.4ms)
+Rendered admin/participants/edit.html.erb within layouts/admin (80.0ms)
+Completed 200 OK in 147ms (Views: 83.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admin/participants/1" for 127.0.0.1 at Wed Nov 03 17:26:37 -0400 2010
+  Processing by Admin::ParticipantsController#update as HTML
+  Parameters: {"commit"=>"Update Participant", "participant"=>{"name"=>"Scott Sampsons", "role_id"=>"1"}, "authenticity_token"=>"1jicEdb7aTQb7u0lUV3aPGH6QuytVg+3569kYk6QxIQ=", "utf8"=>"✓", "id"=>"1"}
+  [1m[35mParticipant Load (0.7ms)[0m  SELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE `participants` SET `name` = 'Scott Sampsons', `updated_at` = '2010-11-03 21:26:37' WHERE (`participants`.`id` = 1)
+  [1m[36mSQL (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/participants
+Completed 302 Found in 54ms
+
+
+Started GET "/admin/participants" for 127.0.0.1 at Wed Nov 03 17:26:37 -0400 2010
+  Processing by Admin::ParticipantsController#index as HTML
+  [1m[35mParticipant Load (0.4ms)[0m  SELECT `participants`.* FROM `participants`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (`roles`.`id` = 1) LIMIT 1[0m
+  [1m[35mRole Load (0.4ms)[0m  SELECT `roles`.* FROM `roles` WHERE (`roles`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (`roles`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (`roles`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (`roles`.`id` = 1) LIMIT 1[0m
+Rendered admin/shared/_nav.html.erb (1.9ms)
+Rendered admin/participants/index.html.erb within layouts/admin (52.8ms)
+Completed 200 OK in 109ms (Views: 55.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/participants/1/edit" for 127.0.0.1 at Wed Nov 03 17:26:39 -0400 2010
+  Processing by Admin::ParticipantsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mParticipant Load (0.6ms)[0m  SELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 1) LIMIT 1
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+Rendered admin/participants/_form.html.erb (11.0ms)
+Rendered admin/shared/_nav.html.erb (1.8ms)
+Rendered admin/participants/edit.html.erb within layouts/admin (19.0ms)
+Completed 200 OK in 92ms (Views: 22.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/admin/participants/1" for 127.0.0.1 at Wed Nov 03 17:26:42 -0400 2010
+  Processing by Admin::ParticipantsController#update as HTML
+  Parameters: {"commit"=>"Update Participant", "participant"=>{"name"=>"Scott Sampson", "role_id"=>"1"}, "authenticity_token"=>"1jicEdb7aTQb7u0lUV3aPGH6QuytVg+3569kYk6QxIQ=", "utf8"=>"✓", "id"=>"1"}
+  [1m[35mParticipant Load (0.3ms)[0m  SELECT `participants`.* FROM `participants` WHERE (`participants`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `participants` SET `name` = 'Scott Sampson', `updated_at` = '2010-11-03 21:26:42' WHERE (`participants`.`id` = 1)
+  [1m[36mSQL (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/participants
+Completed 302 Found in 78ms
+
+
+Started GET "/admin/participants" for 127.0.0.1 at Wed Nov 03 17:26:42 -0400 2010
+  Processing by Admin::ParticipantsController#index as HTML
+  [1m[35mParticipant Load (0.3ms)[0m  SELECT `participants`.* FROM `participants`
+  [1m[36mRole Load (0.5ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (`roles`.`id` = 1) LIMIT 1[0m
+  [1m[35mRole Load (1.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (`roles`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (`roles`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (`roles`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (`roles`.`id` = 1) LIMIT 1[0m
+Rendered admin/shared/_nav.html.erb (3.3ms)
+Rendered admin/participants/index.html.erb within layouts/admin (60.6ms)
+Completed 200 OK in 119ms (Views: 64.1ms | ActiveRecord: 1.8ms)

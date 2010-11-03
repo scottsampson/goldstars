@@ -36,6 +36,7 @@ class Admin::ParticipantsController < Admin::ApplicationController
   # GET /participants/1/edit
   def edit
     @participant = Participant.find(params[:id])
+    @roles = Role.find(:all)
   end
 
   # POST /participants
