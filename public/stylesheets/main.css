@@ -89,3 +89,26 @@ table#display td.score {
   width:3%;
 }
 
+table.rules_table {
+  width:70%;
+}
+
+table.rules_table td {
+  margin:2px;
+  background-color:#dddddd;
+  padding:5px;
+  width:100%;
+}
+
+table.rules_table td.name {
+  width:10%;
+}
+
+table.rules_table td.score {
+  width:3%;
+}
+
+.right_link {
+  float:right;
+  margin-right:80px;
+}

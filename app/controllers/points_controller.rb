@@ -37,4 +37,12 @@ class PointsController < ApplicationController
     end
   end
 
+  def rules
+    @point_types = PointType.find(:all)
+    @award_types = AwardType.find(:all)
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @points }
+    end
+  end
 end

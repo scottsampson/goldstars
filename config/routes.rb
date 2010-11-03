@@ -10,8 +10,7 @@ Goldstars::Application.routes.draw do
     root :to => "points#index"
   end
   
-  resources :points
-  
+  match 'points/rules' => 'points#rules'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
