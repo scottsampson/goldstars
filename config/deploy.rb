@@ -1,7 +1,7 @@
 set :application, "goldstars"
 set :repository,  "git@github.com:scottsampson/goldstars.git"
 
-set :user, "ubuntu"
+set :user, "root"
 
 set :deploy_to, "/srv/#{application}"
 

@@ -1,0 +1,18 @@
+<span class="right_link"><a href="/">Back To Scores</a></span><h1>Gold Freaking Stars!</h1>
+<h2>Point Details for <%= @participant.name %></h2>
+<table class="rules_table">
+  <tr>
+    <th>Date Entered</th>  
+    <th>Type</th>
+    <th>Stars</th>
+    <th>description</th>
+  </tr>
+<% @points.each do |point| %>
+  <tr>
+    <td class="name"><%= point.created_at %></td>
+    <td class="name"><%= point.point_type.name %></td>
+    <td class="score"><%= point.point_type.value %></td>
+    <td class="score"><%= point.description %></td>
+  </tr>
+<% end %>
+</table>

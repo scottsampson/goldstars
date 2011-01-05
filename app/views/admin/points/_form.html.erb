@@ -19,6 +19,10 @@
     <%= f.label :point_type_id %><br />
     <%= f.select :point_type_id, options_for_select(@point_types.collect{|pt| [pt.name,pt.id]}.sort,@point.point_type_id) %>
   </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description, :cols => 60, :rows => 10 %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

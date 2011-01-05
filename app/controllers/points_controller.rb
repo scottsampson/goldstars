@@ -36,6 +36,11 @@ class PointsController < ApplicationController
       format.xml  { render :xml => @points }
     end
   end
+  
+  def details
+    @participant = Participant.find_by_id(params[:id])
+    @points = Point.find_all_by_participant_id(params[:id])
+  end
 
   def rules
     @point_types = PointType.find(:all)

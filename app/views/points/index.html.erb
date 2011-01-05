@@ -11,7 +11,7 @@
   -->
 <% @participants.each do |participant| %>
   <tr>
-    <td class="name"><%= participant.name %></td>
+    <td class="name"><a href='/points/details/<%= participant.id %>'><%= participant.name %></a></td>
     <td class="score"><%= @score[participant.id].nil? ? 0 : @score[participant.id] %></td>
     <td class="stars">
       <%- if !@score[participant.id].nil? && @score[participant.id] > 0   %>
