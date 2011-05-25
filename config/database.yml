@@ -34,6 +34,6 @@ production:
   reconnect: false
   database: goldstars_production
   pool: 5
-  username: root
-  password:
+  username: goldstars
+  password: c5c51d4842308ab708feb9
   socket: /var/run/mysqld/mysqld.sock
