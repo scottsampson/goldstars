@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %title Gold Stars
+    = stylesheet_link_tag :all
+    = javascript_include_tag 'jquery-1.6.1.min'
+    = javascript_include_tag 'goldstars'
+    = csrf_meta_tag
+  
+  %body
+    %span.right_link
+      %a{ :href => '/points/rules' } How do I earn stars?
+    
+    %h1= link_to 'Gold Stars', '/'
+    %p Gotta catch 'em all.
+    = yield

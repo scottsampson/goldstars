@@ -1,0 +1,189 @@
+
+$background: #eee
+$bgcolor: #fff
+
+@mixin courier
+  font:
+    family: 'Courier New'
+    weight: bold
+    size: 13px
+  text-shadow: 0 1px 1px white
+
+body
+  position: relative
+  background-color: $bgcolor
+  margin: 2em
+
+h1
+  a
+    text-decoration: none
+  & + p
+    padding-bottom: 1em
+  
+a
+  color: #666
+a:hover
+  color: black
+  text-shadow: 0 0 3px white
+  text-decoration: none
+
+.padded-top
+  padding-top: 8em
+
+span.award
+  position: relative
+  cursor: default
+  font:
+    size: 10px
+    color: #666
+
+div.award.info
+  position: absolute
+  bottom: 100%
+  left: -1px
+  background: $background
+  min-width: 175px
+  max-width: 250px
+  padding: 2px 8px 4px
+  border:
+    width: 1px
+    color: darken( $background, 15% )
+    style: solid
+    bottom:
+      width: 2px
+      color: darken( $background, 30% )
+      style: solid
+    top:
+      left-radius: 7px
+      right-radius: 7px
+  margin-bottom: 12px
+  -moz-box-shadow: 0 0 8px #eee
+  -webkit-box-shadow: 0 0 8px #eee
+  box-shadow: 0 0 8px #eee
+    
+  p
+    padding: 0
+    margin: 0
+    font:
+      size: 11px
+      family: 'Verdana'
+    &.created_at
+      color: darken( $background, 25% )
+    &.name
+      font-weight: bold
+    &.description
+      span
+        font:
+          weight: normal
+          size: 80%
+        padding-left: .5em
+        color: darken( $background, 25% )
+    
+.fade
+  opacity: .65
+  filter: alpha(opacity=65)
+  
+table#display
+  border-collapse: collapse
+  padding: 0
+  td
+    padding: 6px 1.5em 4px
+    background-color: $background
+    border-bottom: 2px solid $bgcolor
+    
+    &:first-child
+      border-left: 2px solid #aaa
+      border-right: 2px dotted $bgcolor      
+    &.created_at
+      @include courier
+    &.name
+      white-space: nowrap
+    &.score
+      text-align: center
+      font-weight: bold
+      color: darken( $background, 60% )
+      text-shadow: 1px 1px 1px white
+    &.stars
+      padding-left: 0
+      
+      
+table#point
+  position: absolute
+  margin-top: 1em
+  td
+    vertical-align: top
+    padding: .25em
+    select, input
+      border:
+        radius: 5px
+        width: 1px
+        color: darken( $background, 30% )
+        style: solid
+      font:
+        family: 'Verdana'
+        size: 10pt
+        color: darken( $background, 50% )
+      background:
+        color: $background
+      padding: 3px
+    select
+      border:
+        top-right-radius: 0px
+        bottom-right-radius: 0px
+      padding-left: 0
+      option:hover
+        color: white
+      
+table#admin
+  border-collapse: collapse
+  background-color: $background
+  margin: 1em
+  width: 80%
+  &.just-added tr:first-child
+    background-color: darken( $background, 15% )
+    td:first-child
+      border-left: 2px solid orange
+  &.just-added tr:nth-child(2)
+    background-color: darken( $background, 5% )
+    td:first-child
+      border-left: 2px solid darken( $background, 5% )
+  &.just-added tr:nth-child(3)
+    background-color: $background
+    td:first-child
+      border-left: 2px solid $background
+    
+  th
+    background-color: white
+    text-align: left
+    padding-bottom: .5em
+  td
+    padding: 6px 12px
+    border-top: 2px solid white
+    color: #666
+    
+    &:first-child
+      border-left: 2px solid #aaa
+      white-space: nowrap
+    &:nth-child(2)
+      color: #333
+    &.stars
+      border-left: 2px dotted white
+      color: #999
+    &.stars, &.created_at
+      text-align: right
+      white-space: nowrap
+      @include courier
+    &.created_at
+      padding-left: 0
+    &.admin
+      background-color: white
+      padding: 0 0 0 1em
+      font-size: 80%
+      a
+        color: #ccc
+        
+#details
+  padding: .5em
+    left: 0
+  p
+    margin: 5px 0

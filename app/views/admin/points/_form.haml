@@ -1,0 +1,15 @@
+- form_for [:admin, @point] do |f|
+
+  - if @point.errors.any?
+    #error_explanation
+      %h2== #{pluralize(@point.errors.count, "error")} prohibited this point from being saved:
+      %ul
+      - @point.errors.full_messages.each do |msg|
+        %li= msg
+
+  %table#point
+    %tr
+      %td.participant= f.select :participant_id, options_for_select(@participants.collect{|p| [p.name,p.id]}.sort,@point.participant_id)
+      %td.pointtype= f.select :point_type_id, options_for_select(@point_types.collect{|pt| [pt.name,pt.id]}.sort, @point.point_type_id)
+      %td.description= f.text_field :description, :placeholder => 'Description'
+      %td.submit= f.submit

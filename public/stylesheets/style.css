@@ -1,0 +1,168 @@
+body {
+  position: relative;
+  background-color: white;
+  margin: 2em; }
+
+h1 a {
+  text-decoration: none; }
+h1 + p {
+  padding-bottom: 1em; }
+
+a {
+  color: #666666; }
+
+a:hover {
+  color: black;
+  text-shadow: 0 0 3px white;
+  text-decoration: none; }
+
+.padded-top {
+  padding-top: 8em; }
+
+span.award {
+  position: relative;
+  cursor: default;
+  font-size: 10px;
+  font-color: #666666; }
+
+div.award.info {
+  position: absolute;
+  bottom: 100%;
+  left: -1px;
+  background: #eeeeee;
+  min-width: 175px;
+  max-width: 250px;
+  padding: 2px 8px 4px;
+  border-width: 1px;
+  border-color: #c8c8c8;
+  border-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #a2a2a2;
+  border-bottom-style: solid;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  margin-bottom: 12px;
+  -moz-box-shadow: 0 0 8px #eeeeee;
+  -webkit-box-shadow: 0 0 8px #eeeeee;
+  box-shadow: 0 0 8px #eeeeee; }
+  div.award.info p {
+    padding: 0;
+    margin: 0;
+    font-size: 11px;
+    font-family: "Verdana"; }
+    div.award.info p.created_at {
+      color: #aeaeae; }
+    div.award.info p.name {
+      font-weight: bold; }
+    div.award.info p.description span {
+      font-weight: normal;
+      font-size: 80%;
+      padding-left: 0.5em;
+      color: #aeaeae; }
+
+.fade {
+  opacity: 0.65;
+  filter: alpha(opacity=65); }
+
+table#display {
+  border-collapse: collapse;
+  padding: 0; }
+  table#display td {
+    padding: 6px 1.5em 4px;
+    background-color: #eeeeee;
+    border-bottom: 2px solid white; }
+    table#display td:first-child {
+      border-left: 2px solid #aaaaaa;
+      border-right: 2px dotted white; }
+    table#display td.created_at {
+      font-family: "Courier New";
+      font-weight: bold;
+      font-size: 13px;
+      text-shadow: 0 1px 1px white; }
+    table#display td.name {
+      white-space: nowrap; }
+    table#display td.score {
+      text-align: center;
+      font-weight: bold;
+      color: #555555;
+      text-shadow: 1px 1px 1px white; }
+    table#display td.stars {
+      padding-left: 0; }
+
+table#point {
+  position: absolute;
+  margin-top: 1em; }
+  table#point td {
+    vertical-align: top;
+    padding: 0.25em; }
+    table#point td select, table#point td input {
+      border-radius: 5px;
+      border-width: 1px;
+      border-color: #a2a2a2;
+      border-style: solid;
+      font-family: "Verdana";
+      font-size: 10pt;
+      font-color: #6e6e6e;
+      background-color: #eeeeee;
+      padding: 3px; }
+    table#point td select {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      padding-left: 0; }
+      table#point td select option:hover {
+        color: white; }
+
+table#admin {
+  border-collapse: collapse;
+  background-color: #eeeeee;
+  margin: 1em;
+  width: 80%; }
+  table#admin.just-added tr:first-child {
+    background-color: #c8c8c8; }
+    table#admin.just-added tr:first-child td:first-child {
+      border-left: 2px solid orange; }
+  table#admin.just-added tr:nth-child(2) {
+    background-color: #e1e1e1; }
+    table#admin.just-added tr:nth-child(2) td:first-child {
+      border-left: 2px solid #e1e1e1; }
+  table#admin.just-added tr:nth-child(3) {
+    background-color: #eeeeee; }
+    table#admin.just-added tr:nth-child(3) td:first-child {
+      border-left: 2px solid #eeeeee; }
+  table#admin th {
+    background-color: white;
+    text-align: left;
+    padding-bottom: 0.5em; }
+  table#admin td {
+    padding: 6px 12px;
+    border-top: 2px solid white;
+    color: #666666; }
+    table#admin td:first-child {
+      border-left: 2px solid #aaaaaa;
+      white-space: nowrap; }
+    table#admin td:nth-child(2) {
+      color: #333333; }
+    table#admin td.stars {
+      border-left: 2px dotted white;
+      color: #999999; }
+    table#admin td.stars, table#admin td.created_at {
+      text-align: right;
+      white-space: nowrap;
+      font-family: "Courier New";
+      font-weight: bold;
+      font-size: 13px;
+      text-shadow: 0 1px 1px white; }
+    table#admin td.created_at {
+      padding-left: 0; }
+    table#admin td.admin {
+      background-color: white;
+      padding: 0 0 0 1em;
+      font-size: 80%; }
+      table#admin td.admin a {
+        color: #cccccc; }
+
+#details {
+  padding: 0.5em;
+    padding-left: 0; }
+  #details p {
+    margin: 5px 0; }

@@ -1,0 +1,16 @@
+%h2 Awarded points
+%p#notice= notice
+%strong= link_to 'Give stars!', new_admin_point_path
+
+%table#admin
+  - @points.sort_by{|p| p['created_at']}.reverse.each do |point|
+    %tr
+      %td.participant= point.participant.name
+      %td.pointtype= point.point_type.name
+      %td.description= point.description
+      %td.stars== #{point.point_type.value} stars on
+      %td.created_at= point.created_at.strftime( "%b %d, %Y" )
+      %td.admin= link_to 'view', [:admin,point]
+      %td.admin= link_to 'edit', edit_admin_point_path(point)
+      
+%strong= link_to 'Give stars!', new_admin_point_path

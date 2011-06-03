@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %strong Employee:
+  = @point.participant.name
+
+%p
+  %strong Type of Award:
+  = @point.point_type.name
+
+%p
+  %strong Date:
+  = @point.created_at
+
+%p
+  %strong Description:
+  = @point.description
+
+= link_to 'Edit', edit_admin_point_path(@point)
+|
+= link_to 'Back', admin_points_path

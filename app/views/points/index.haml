@@ -1,0 +1,15 @@
+%table#display
+  - @participants.each do |user|
+    %tr
+      %td.name= link_to user.name, "/points/details/#{user.id}"
+      %td.score= user.score
+      %td.stars
+        - user.points.sort_by{|a| a['created_at']}.reverse.each do |awarded|
+          %span.award
+            = stars awarded.point_type.value
+            %div.award.info
+              %p.created_at= awarded.created_at.strftime( "%b %e, %Y" )
+              %p.name= awarded.point_type.name
+              %p.description
+                = awarded.description
+                %span== #{awarded.point_type.value} pts
