@@ -1,23 +1,14 @@
-<h1>Listing point_types</h1>
+<h2>Point Types</h2>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Points</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<table id="admin">
 <% @point_types.each do |point_type| %>
   <tr>
     <td><%= point_type.name %></td>
     <td><%= point_type.description %></td>
-    <td><%= point_type.value %></td>
-    <td><%= link_to 'Show', [:admin,point_type] %></td>
-    <td><%= link_to 'Edit', edit_admin_point_type_path(point_type) %></td>
-    <td><%= link_to 'Destroy', [:admin,point_type], :confirm => 'Are you sure?', :method => :delete %></td>
+    <td class="stars"><%= point_type.value %> stars</td>
+    <td class="admin"><%= link_to 'Show', [:admin,point_type] %></td>
+    <td class="admin"><%= link_to 'Edit', edit_admin_point_type_path(point_type) %></td>
+    <td class="admin"><%= link_to 'Destroy', [:admin,point_type], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

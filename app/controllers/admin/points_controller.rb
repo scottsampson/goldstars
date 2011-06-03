@@ -27,6 +27,7 @@ class Admin::PointsController < Admin::ApplicationController
     @point = Point.new
     @participants = Participant.find(:all)
     @point_types = PointType.find(:all)
+    @points = Point.order('created_at desc').limit(3)
 
     respond_to do |format|
       format.html # new.html.erb
@@ -48,7 +49,7 @@ class Admin::PointsController < Admin::ApplicationController
 
     respond_to do |format|
       if @point.save
-        format.html { redirect_to(admin_points_path, :notice => 'Point was successfully created.') }
+        format.html { redirect_to(admin_points_path+'/new', :notice => 'Point was successfully created.') }
         format.xml  { render :xml => @point, :status => :created, :location => @point }
       else
         format.html { render :action => "new" }

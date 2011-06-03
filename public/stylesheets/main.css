@@ -12,14 +12,6 @@ pre {
   font-size: 11px;
 }
 
-a { color: #000; }
-a:visited { color: #666; }
-a:hover { color: #fff; background-color:#000; }
-
-div.field, div.actions {
-  margin-bottom: 10px;
-}
-
 #notice {
   color: green;
 }
@@ -71,41 +63,6 @@ div.field, div.actions {
 
 .clear {
 	clear:both;
-}
-
-
-table#display td {
-  margin:2px;
-  background-color:#dddddd;
-  padding:5px;
-  width:100%;
-}
-
-table#display td.name {
-  width:10%;
-}
-
-table#display td.score {
-  width:3%;
-}
-
-table.rules_table {
-  width:70%;
-}
-
-table.rules_table td {
-  margin:2px;
-  background-color:#dddddd;
-  padding:5px;
-  width:100%;
-}
-
-table.rules_table td.name {
-  width:10%;
-}
-
-table.rules_table td.score {
-  width:3%;
 }
 
 .right_link {

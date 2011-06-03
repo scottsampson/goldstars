@@ -1,25 +1,16 @@
-<h1>Listing award_types</h1>
+<h2>Types of Awards</h2>
 
 <p id="notice"><%= notice %></p>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Num points</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<table id="admin">
 <% @award_types.each do |award_type| %>
   <tr>
     <td><%= award_type.name %></td>
     <td><%= award_type.description %></td>
-    <td><%= award_type.num_points %></td>
-    <td><%= link_to 'Show', [:admin,award_type] %></td>
-    <td><%= link_to 'Edit', edit_admin_award_type_path(award_type) %></td>
-    <td><%= link_to 'Destroy', [:admin,award_type], :confirm => 'Are you sure?', :method => :delete %></td>
+    <td class="stars"><%= award_type.num_points %> stars</td>
+    <td class="admin"><%= link_to 'Show', [:admin,award_type] %></td>
+    <td class="admin"><%= link_to 'Edit', edit_admin_award_type_path(award_type) %></td>
+    <td class="admin"><%= link_to 'Destroy', [:admin,award_type], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

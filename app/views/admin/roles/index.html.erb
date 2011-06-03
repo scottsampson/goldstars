@@ -1,21 +1,14 @@
-<h1>Listing roles</h1>
+<h2>Listing roles</h2>
 
 <p id="notice"><%= notice %></p>
 
-<table>
-  <tr>
-    <th>Role name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<table id="admin">
 <% @roles.each do |role| %>
   <tr>
     <td><%= role.role_name %></td>
-    <td><%= link_to 'Show', [:admin, role] %></td>
-    <td><%= link_to 'Edit', edit_admin_role_path(role) %></td>
-    <td><%= link_to 'Destroy', [:admin, role], :confirm => 'Are you sure?', :method => :delete %></td>
+    <td class="admin"><%= link_to 'Show', [:admin, role] %></td>
+    <td class="admin"><%= link_to 'Edit', edit_admin_role_path(role) %></td>
+    <td class="admin"><%= link_to 'Destroy', [:admin, role], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

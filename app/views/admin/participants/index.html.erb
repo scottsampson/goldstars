@@ -1,23 +1,15 @@
-<h1>Listing participants</h1>
+<h2>Listing participants</h2>
 
 <p id="notice"><%= notice %></p>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Role</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<table id="admin">
 <% @participants.each do |participant| %>
   <tr>
     <td><%= participant.name %></td>
     <td><%= participant.role.role_name %></td>
-    <td><%= link_to 'Show', [:admin,participant] %></td>
-    <td><%= link_to 'Edit', edit_admin_participant_path(participant) %></td>
-    <td><%= link_to 'Destroy', [:admin,participant], :confirm => 'Are you sure?', :method => :delete %></td>
+    <td class="admin"><%= link_to 'Show', [:admin,participant] %></td>
+    <td class="admin"><%= link_to 'Edit', edit_admin_participant_path(participant) %></td>
+    <td class="admin"><%= link_to 'Destroy', [:admin,participant], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
