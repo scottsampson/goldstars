@@ -1,15 +1,17 @@
-%h2== #{@participant.name}
-%table#display
+%h2= @participant.name
+%table#display.stars
   %tr
     %td Current
-    %td.score ##
+    %td.score= stars @stars[:current]
   %tr
     %td Spent
-    %td.score ##
+    %td.score= stars @stars[:spent]
   %tr
     %td
       %strong Lifetime
-    %td.score ##
+    %td.score
+      = @stars[:lifetime]
+      stars
 
 %h3 History
 %table#display
@@ -21,3 +23,12 @@
       %td.description= point.description
 
 %h3 Awards
+%table#display
+  - @awards.sort_by{|p| p['created_by']}.reverse.each do |award|
+    %tr
+      %td.created_at= award.created_at.strftime( "%b %d, %Y" )
+      %td.pointtype= award.award_type.name
+      %td.description= award.award_type.description
+      %td.score
+        = award.award_type.num_points
+        stars

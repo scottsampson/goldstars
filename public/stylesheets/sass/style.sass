@@ -29,13 +29,18 @@ a:hover
 
 .padded-top
   padding-top: 8em
+  
+.score img
+  padding: 0 1px
 
 span.award
   position: relative
   cursor: default
-  font:
-    size: 10px
-    color: #666
+  font-weight: bold
+  color: darken( $background, 10% )
+  text-shadow: 1px 1px 1px white
+  img
+    padding: 0 1px
 
 div.award.info
   position: absolute
@@ -56,7 +61,7 @@ div.award.info
     top:
       left-radius: 7px
       right-radius: 7px
-  margin-bottom: 12px
+  margin-bottom: 8px
   -moz-box-shadow: 0 0 8px #eee
   -webkit-box-shadow: 0 0 8px #eee
   box-shadow: 0 0 8px #eee
@@ -64,13 +69,17 @@ div.award.info
   p
     padding: 0
     margin: 0
+    color: #666
+    text-shadow: none
     font:
+      weight: normal
       size: 11px
       family: 'Verdana'
     &.created_at
       color: darken( $background, 25% )
     &.name
       font-weight: bold
+      color: #333
     &.description
       span
         font:
@@ -86,6 +95,8 @@ div.award.info
 table#display
   border-collapse: collapse
   padding: 0
+  &.stars td.score
+    text-align: left
   td
     padding: 6px 1.5em 4px
     background-color: $background

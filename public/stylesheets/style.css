@@ -19,11 +19,17 @@ a:hover {
 .padded-top {
   padding-top: 8em; }
 
+.score img {
+  padding: 0 1px; }
+
 span.award {
   position: relative;
   cursor: default;
-  font-size: 10px;
-  font-color: #666666; }
+  font-weight: bold;
+  color: #d4d4d4;
+  text-shadow: 1px 1px 1px white; }
+  span.award img {
+    padding: 0 1px; }
 
 div.award.info {
   position: absolute;
@@ -41,19 +47,23 @@ div.award.info {
   border-bottom-style: solid;
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   -moz-box-shadow: 0 0 8px #eeeeee;
   -webkit-box-shadow: 0 0 8px #eeeeee;
   box-shadow: 0 0 8px #eeeeee; }
   div.award.info p {
     padding: 0;
     margin: 0;
+    color: #666666;
+    text-shadow: none;
+    font-weight: normal;
     font-size: 11px;
     font-family: "Verdana"; }
     div.award.info p.created_at {
       color: #aeaeae; }
     div.award.info p.name {
-      font-weight: bold; }
+      font-weight: bold;
+      color: #333333; }
     div.award.info p.description span {
       font-weight: normal;
       font-size: 80%;
@@ -67,6 +77,8 @@ div.award.info {
 table#display {
   border-collapse: collapse;
   padding: 0; }
+  table#display.stars td.score {
+    text-align: left; }
   table#display td {
     padding: 6px 1.5em 4px;
     background-color: #eeeeee;

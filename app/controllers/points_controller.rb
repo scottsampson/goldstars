@@ -2,27 +2,9 @@ class PointsController < ApplicationController
   # GET /points
   # GET /points.xml
   def index
-    #all of this crap below is to do two queries instead of 40
-    sql = "select sum(b.value) points,a.participant_id
-      from points a,point_types b
-      where a.point_type_id = b.id
-      group by (a.participant_id)";
-    @points = {}
-    # This hash maps each participant ID# to the sum of their points
-    Point.find_by_sql(sql).each{|point| @points[point.participant_id] = point.points}
-    
-    sql = "select sum(b.num_points) cashed,a.participant_id 
-      from awards a,award_types b
-      where a.award_type_id = b.id
-      group by (a.participant_id)"
-    @awards = {}
-    Award.find_by_sql(sql).each{|award| @awards[award.participant_id] = award.cashed}
-    
-    @participants = Participant.find(:all)
-    @score = {}
-    @points.each do |key,val|
-      @score[key] = val.to_i - @awards[key].to_i
-    end
+
+    @participants = Participant.find(:all, :include => :points)
+    @score = Participant.scores
     
     @participants.each do |p|
       p.score = @score[p.id].nil? ? 0 : @score[p.id]
@@ -36,8 +18,18 @@ class PointsController < ApplicationController
   end
   
   def details
-    @participant = Participant.find_by_id(params[:id])
-    @points = Point.find_all_by_participant_id(params[:id])
+    @participant = Participant.find_by_id( params[:id] )
+    @points = Point.find_all_by_participant_id( @participant )
+    @awards = Award.find_all_by_participant_id( @participant )
+    
+    @stars = {  :current => 0,
+                :spent => 0,
+                :lifetime => 0 }
+                
+    @points.each{ |p| @stars[:lifetime] += p.point_type.value.to_i }
+    @awards.each{ |a| @stars[:spent] += a.award_type.num_points.to_i }
+    @stars[:current] = @stars[:lifetime] - @stars[:spent]
+    
   end
 
   def rules

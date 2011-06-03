@@ -7,9 +7,9 @@ module ApplicationHelper
   def stars(num)
     stars = ""
     for i in 1..num
-      stars += "<img src=\"/images/star.png\"\\> "
+      stars += "<img src=\"/images/star.png\"\\>"
     end
-    stars += "\n&nbsp;"
+    stars += "\n"
     stars.html_safe
   end
   
