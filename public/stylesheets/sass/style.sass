@@ -41,7 +41,7 @@ span.award
   cursor: default
   display: inline-block
   position: relative
-  padding: 7px 0 4px
+  padding-bottom: 2px
   img
     padding: 0 1px
 
@@ -98,10 +98,9 @@ table#display
     
   &.index
     cursor: default
-    td
-      padding:
-        top: 0
-        bottom: 0
+    td.stars
+      padding: 6px 0 1px
+    
   td
     padding: 6px 1.5em 4px
     background-color: $background
@@ -112,6 +111,7 @@ table#display
       border-right: 2px dotted $bgcolor
     &.created_at
       @include courier
+      white-space: nowrap
     &.name
       white-space: nowrap
     &.pointtype
@@ -123,8 +123,9 @@ table#display
       color: darken( $background, 60% )
       text-shadow: 1px 1px 1px white
     &.stars
-      padding-left: 0
+      padding: 0
       font-weight: bold
+      font-size: 10px
       color: darken( $background, 10% )
       text-shadow: 1px 1px 1px white
       
