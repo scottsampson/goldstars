@@ -24,7 +24,9 @@ set :daemon_pid, "#{shared_path}/pids/aws_statusd.pid"
 
 namespace :deploy do
   task :restart do
-    run "sudo kill -USR2 `cat #{unicorn_pid}`"
+    # run "sudo kill -USR2 `cat #{unicorn_pid}`"
+    deploy.stop
+    deploy.start
   end
   
   task :start do
