@@ -19,6 +19,10 @@
     <%= f.label :award_type_id %><br />
     <%= f.select :award_type_id, options_for_select(@award_types.collect{|at| [at.name,at.id]}.sort,@award.id) %>
   </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

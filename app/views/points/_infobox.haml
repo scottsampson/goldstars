@@ -1,0 +1,10 @@
+%span.award
+  = stars awarded.point_type.value
+  %div.award.info
+    %p.created_at= awarded.created_at.strftime( "%b %e, %Y" )
+    %p.name= awarded.point_type.name
+    %p.description
+      = awarded.description
+      %span
+        = awarded.point_type.value
+        pts

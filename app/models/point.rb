@@ -2,7 +2,7 @@ class Point < ActiveRecord::Base
   belongs_to :point_type
   belongs_to :participant
   
-  #generates Point sums from *all* Points in the database
+  #generates Point sums for *all* Participants in the database
   def self.sums
     sql = "select sum(b.value) points,a.participant_id
       from points a,point_types b

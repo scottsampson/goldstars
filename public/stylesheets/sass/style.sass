@@ -1,6 +1,7 @@
 
-$background: #eee
-$bgcolor: #fff
+$background: #ededed
+$bgcolor: lighten( $background, 7% )
+$popup: lighten( $background, 5% )
 
 @mixin courier
   font:
@@ -10,9 +11,12 @@ $bgcolor: #fff
   text-shadow: 0 1px 1px white
 
 body
-  position: relative
   background-color: $bgcolor
   margin: 2em
+  
+h2, h3, h4, h5, h6
+  padding: 1em 0 0
+  margin-bottom: .75em
 
 h1
   a
@@ -34,38 +38,31 @@ a:hover
   padding: 0 1px
 
 span.award
-  position: relative
   cursor: default
-  font-weight: bold
-  color: darken( $background, 10% )
-  text-shadow: 1px 1px 1px white
+  display: inline-block
+  position: relative
+  padding: 7px 0 4px
   img
     padding: 0 1px
 
 div.award.info
   position: absolute
+  left: -5px
   bottom: 100%
-  left: -1px
-  background: $background
+  background: $popup
   min-width: 175px
-  max-width: 250px
-  padding: 2px 8px 4px
+  max-width: 275px
+  padding: 4px 8px
   border:
     width: 1px
-    color: darken( $background, 15% )
+    color: darken( $popup, 15% )
     style: solid
-    bottom:
-      width: 2px
-      color: darken( $background, 30% )
-      style: solid
+    bottom-color: darken( $background, 35% )
     top:
-      left-radius: 7px
-      right-radius: 7px
-  margin-bottom: 8px
-  -moz-box-shadow: 0 0 8px #eee
-  -webkit-box-shadow: 0 0 8px #eee
-  box-shadow: 0 0 8px #eee
-    
+      left-radius: 5px
+      right-radius: 5px
+  margin: 0
+  -webkit-box-shadow: 0 0 7px darken( $background, 5% )
   p
     padding: 0
     margin: 0
@@ -94,32 +91,45 @@ div.award.info
   
 table#display
   border-collapse: collapse
+  position: relative
   padding: 0
   &.stars td.score
     text-align: left
+    
+  &.index
+    cursor: default
+    td
+      padding:
+        top: 0
+        bottom: 0
   td
     padding: 6px 1.5em 4px
     background-color: $background
     border-bottom: 2px solid $bgcolor
     
     &:first-child
-      border-left: 2px solid #aaa
-      border-right: 2px dotted $bgcolor      
+      border-left: 2px solid darken( $background, 15% )
+      border-right: 2px dotted $bgcolor
     &.created_at
       @include courier
     &.name
       white-space: nowrap
+    &.pointtype
+      white-space: nowrap
     &.score
+      white-space: nowrap
       text-align: center
       font-weight: bold
       color: darken( $background, 60% )
       text-shadow: 1px 1px 1px white
     &.stars
       padding-left: 0
+      font-weight: bold
+      color: darken( $background, 10% )
+      text-shadow: 1px 1px 1px white
       
       
 table#point
-  position: absolute
   margin-top: 1em
   td
     vertical-align: top
@@ -142,8 +152,6 @@ table#point
         top-right-radius: 0px
         bottom-right-radius: 0px
       padding-left: 0
-      option:hover
-        color: white
       
 table#admin
   border-collapse: collapse
@@ -173,7 +181,7 @@ table#admin
     color: #666
     
     &:first-child
-      border-left: 2px solid #aaa
+      border-left: 2px solid darken( $background, 15% )
       white-space: nowrap
     &:nth-child(2)
       color: #333
@@ -191,7 +199,7 @@ table#admin
       padding: 0 0 0 1em
       font-size: 80%
       a
-        color: #ccc
+        color: darken( $background, 10% )
         
 #details
   padding: .5em

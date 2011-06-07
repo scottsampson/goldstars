@@ -7,7 +7,8 @@
   <tr>
     <td><%= award.participant.name %></td>
     <td><%= award.award_type.name %></td>
-    <td><%= award.created_at %></td>
+    <td><%= award.description %></td>
+    <td class="created_at"><%= award.created_at.strftime( "%b %d, %Y" ) %></td>
     <td class="admin"><%= link_to 'Show', [:admin,award] %></td>
     <td class="admin"><%= link_to 'Edit', edit_admin_award_path(award) %></td>
     <td class="admin"><%= link_to 'Destroy', [:admin,award], :confirm => 'Are you sure?', :method => :delete %></td>

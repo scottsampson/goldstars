@@ -2,33 +2,40 @@
 %table#display.stars
   %tr
     %td Current
-    %td.score= stars @stars[:current]
-  %tr
-    %td Spent
-    %td.score= stars @stars[:spent]
-  %tr
-    %td
-      %strong Lifetime
-    %td.score
-      = @stars[:lifetime]
-      stars
+    %td.score{ :title => "#{@stars[:current]} stars" }
+      = @stars[:current]
+      &nbsp;
+      = stars_nowrap @stars[:current], 45, 'stars'
+
+  - if @stars[:spent] > 0
+    %tr
+      %td Spent
+      %td.score{ :title => "#{@stars[:spent]} stars" }
+        = @stars[:spent]
+        &nbsp;
+        = stars_nowrap @stars[:spent], 45, 'stars'
+    %tr
+      %td
+        %strong Lifetime
+      %td.score= @stars[:lifetime]
+
+- unless @awards.empty?
+  %h3 Cashed-in
+  %table#display
+    - @awards.each do |award|
+      %tr
+        %td.created_at= award.created_at.strftime( "%b %d, %Y" )
+        %td.pointtype= award.award_type.name
+        %td.score
+          = award.award_type.num_points
+          stars
+        %td.description= award.description
 
 %h3 History
 %table#display
-  - @points.sort_by{|p| p['created_by']}.reverse.each do |point|
+  - @points.each do |point|
     %tr
       %td.created_at= point.created_at.strftime( "%b %d, %Y" )
       %td.pointtype= point.point_type.name
-      %td.score= stars point.point_type.value
+      %td.score{ :title => "#{point.point_type.value} stars" }= stars point.point_type.value
       %td.description= point.description
-
-%h3 Awards
-%table#display
-  - @awards.sort_by{|p| p['created_by']}.reverse.each do |award|
-    %tr
-      %td.created_at= award.created_at.strftime( "%b %d, %Y" )
-      %td.pointtype= award.award_type.name
-      %td.description= award.award_type.description
-      %td.score
-        = award.award_type.num_points
-        stars

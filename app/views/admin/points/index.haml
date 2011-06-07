@@ -12,5 +12,6 @@
       %td.created_at= point.created_at.strftime( "%b %d, %Y" )
       %td.admin= link_to 'view', [:admin,point]
       %td.admin= link_to 'edit', edit_admin_point_path(point)
+      %td.admin= link_to 'destroy', 'points/'+point.id.to_s+'/destroy'
       
 %strong= link_to 'Give stars!', new_admin_point_path

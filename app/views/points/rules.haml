@@ -1,14 +1,16 @@
 %h2 Earning stars
 %table#display
-  - @point_types.sort_by{|p| p['value']}.reverse.each do |pt|
+  - @point_types.each do |pt|
     %tr
       %td.name= pt.name
       %td.score= stars pt.value
 
 %h2 Spending stars
 %table#display
-  - @award_types.sort_by{|a| a['num_points']}.each do |at|
+  - @award_types.each do |at|
     %tr
       %td.name= at.name
       %td.description= at.description
-      %td.score== #{at.num_points} stars
+      %td.score
+        = at.num_points
+        stars

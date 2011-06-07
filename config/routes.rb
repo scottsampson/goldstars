@@ -8,6 +8,8 @@ Goldstars::Application.routes.draw do
     resources :roles
     resources :participants
     root :to => "points#index"
+    
+    match 'points/:id/destroy' => 'points#destroy'
   end
   
   match 'points/rules' => 'points#rules'

@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20101207213808) do
     t.datetime "updated_at"
     t.integer  "participant_id"
     t.integer  "award_type_id"
+    t.text     "description"
   end
 
   create_table "participants", :force => true do |t|

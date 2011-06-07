@@ -13,4 +13,12 @@ module ApplicationHelper
     stars.html_safe
   end
   
+  def stars_nowrap(numstars, limit=45, string='')
+    if numstars <= limit
+      stars numstars
+    else
+      string.empty? ? numstars.to_s : string
+    end
+  end
+  
 end

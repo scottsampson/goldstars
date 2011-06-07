@@ -4,12 +4,13 @@ class PointsController < ApplicationController
   def index
 
     @participants = Participant.find(:all, :include => :points)
-    @score = Participant.scores
+    @scores = Participant.scores
     
     @participants.each do |p|
-      p.score = @score[p.id].nil? ? 0 : @score[p.id]
+      p.score = @scores[p.id].nil? ? 0 : @scores[p.id]
+      p.points.sort_by!{ |p| p['created_at'] }.reverse!
     end
-    @participants.sort! { |a,b| b.score <=> a.score }
+    @participants.sort!{ |a,b| b.score <=> a.score }
 
     respond_to do |format|
       format.html # index.html.erb
@@ -19,24 +20,18 @@ class PointsController < ApplicationController
   
   def details
     @participant = Participant.find_by_id( params[:id] )
-    @points = Point.find_all_by_participant_id( @participant )
-    @awards = Award.find_all_by_participant_id( @participant )
+    @points = @participant.points.order('created_at desc')
+    @awards = @participant.awards.order('created_at desc')
+    @stars = { :lifetime => 0, :spent => 0, :current => 0 }
     
-    @stars = {  :current => 0,
-                :spent => 0,
-                :lifetime => 0 }
-                
-    @points.each{ |p| @stars[:lifetime] += p.point_type.value.to_i }
-    @awards.each{ |a| @stars[:spent] += a.award_type.num_points.to_i }
+    @stars[:lifetime] = @points.collect{ |p| p.point_type.value.to_i }.sum
+    @stars[:spent] = @awards.collect{ |a| a.award_type.num_points.to_i }.sum
     @stars[:current] = @stars[:lifetime] - @stars[:spent]
-    
   end
 
   def rules
-    @point_types = PointType.find(:all)
-    @award_types = AwardType.find(:all)
-    @point_types.sort! { |a,b| a.name <=> b.name }
-    @award_types.sort! { |a,b| a.name <=> b.name }
+    @point_types = PointType.order('value desc').find(:all)
+    @award_types = AwardType.order('num_points asc').find(:all)
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @points }

@@ -2,7 +2,7 @@ class Admin::AwardsController < Admin::ApplicationController
   # GET /awards
   # GET /awards.xml
   def index
-    @awards = Award.all
+    @awards = Award.order('created_at desc').all
 
     respond_to do |format|
       format.html # index.html.erb
