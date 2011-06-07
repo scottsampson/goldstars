@@ -35,7 +35,7 @@ span.award {
 
 div.award.info {
   position: absolute;
-  left: -5px;
+  left: 0;
   bottom: 100%;
   background: #fafafa;
   min-width: 175px;
@@ -47,7 +47,7 @@ div.award.info {
   border-bottom-color: #949494;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  margin: 0;
+  margin-bottom: 4px;
   -webkit-box-shadow: 0 0 7px #e0e0e0; }
   div.award.info p {
     padding: 0;
@@ -108,9 +108,9 @@ table#display {
     table#display td.stars {
       padding: 0;
       font-weight: bold;
-      font-size: 10px;
-      color: #d3d3d3;
-      text-shadow: 1px 1px 1px white; }
+      font-size: 5px;
+      color: #7a7a7a;
+      text-shadow: 1px 1px 3px white; }
 
 table#point {
   margin-top: 1em; }
