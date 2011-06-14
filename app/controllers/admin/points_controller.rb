@@ -2,7 +2,7 @@ class Admin::PointsController < Admin::ApplicationController
   # GET /points
   # GET /points.xml
   def index
-    @points = Point.all
+    @points = Point.order('created_at desc').limit(75)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -34,12 +34,24 @@ class Admin::PointsController < Admin::ApplicationController
       format.xml  { render :xml => @point }
     end
   end
+  
+  def justadded
+    @point = Point.find(:last, :include => :participant )
+    @justadded = {  :participant => @point.participant.name,
+                    :pointtype => @point.point_type.name,
+                    :description => @point.description,
+                    :stars => @point.point_type.value,
+                    :created_at => @point.created_at.strftime( "%H:%M:%S %b %d" ) }
+    respond_to do |format|
+      format.json { render :json => @justadded }
+    end
+  end
 
   # GET /points/1/edit
   def edit
     @point = Point.find(params[:id])
-    @participants = Participant.find(:all)
-    @point_types = PointType.find(:all)
+    @participants = Participant.all
+    @point_types = PointType.all
   end
 
   # POST /points

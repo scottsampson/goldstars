@@ -1,3 +1,7 @@
+img.loading {
+  width: 200px;
+  height: 200px; }
+
 body {
   background-color: white;
   margin: 2em; }
@@ -16,7 +20,6 @@ a {
 
 a:hover {
   color: black;
-  text-shadow: 0 0 3px white;
   text-decoration: none; }
 
 .padded-top {
@@ -113,42 +116,39 @@ table#display {
       text-shadow: 1px 1px 3px white; }
 
 table#point {
-  margin-top: 1em; }
+  margin-top: 1em;
+  margin-left: 1em; }
   table#point td {
     vertical-align: top;
     padding: 0.25em; }
     table#point td select, table#point td input {
       border-radius: 5px;
       border-width: 1px;
-      border-color: #a1a1a1;
+      border-color: #9d9d9d;
       border-style: solid;
       font-family: "Verdana";
       font-size: 10pt;
-      font-color: #6e6e6e;
-      background-color: #ededed;
-      padding: 3px; }
+      font-color: #555555;
+      background-color: #dddddd;
+      padding: 2px 6px; }
     table#point td select {
       border-top-right-radius: 0px;
       border-bottom-right-radius: 0px;
       padding-left: 0; }
+    table#point td.submit {
+      color: #aaaaaa;
+      font-size: 11px;
+      vertical-align: middle; }
 
 table#admin {
   border-collapse: collapse;
-  background-color: #ededed;
+  background-color: #dddddd;
   margin: 1em;
   width: 80%; }
   table#admin.just-added tr:first-child {
-    background-color: #c7c7c7; }
+    background-color: #eeeeee; }
     table#admin.just-added tr:first-child td:first-child {
-      border-left: 2px solid orange; }
-  table#admin.just-added tr:nth-child(2) {
-    background-color: #e0e0e0; }
-    table#admin.just-added tr:nth-child(2) td:first-child {
-      border-left: 2px solid #e0e0e0; }
-  table#admin.just-added tr:nth-child(3) {
-    background-color: #ededed; }
-    table#admin.just-added tr:nth-child(3) td:first-child {
-      border-left: 2px solid #ededed; }
+      border-left-color: #aeaeae; }
   table#admin th {
     background-color: white;
     text-align: left;
@@ -156,15 +156,12 @@ table#admin {
   table#admin td {
     padding: 6px 12px;
     border-top: 2px solid white;
-    color: #666666; }
+    color: #555555; }
     table#admin td:first-child {
-      border-left: 2px solid #c7c7c7;
+      border-left: 2px solid #b7b7b7;
       white-space: nowrap; }
-    table#admin td:nth-child(2) {
-      color: #333333; }
     table#admin td.stars {
-      border-left: 2px dotted white;
-      color: #999999; }
+      border-left: 2px dotted white; }
     table#admin td.stars, table#admin td.created_at {
       text-align: right;
       white-space: nowrap;

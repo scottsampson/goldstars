@@ -3,12 +3,20 @@ $background: #ededed
 $bgcolor: lighten( $background, 7% )
 $popup: lighten( $background, 5% )
 
+$tan: #ddd
+$green: #eee
+$text: #555
+
 @mixin courier
   font:
     family: 'Courier New'
     weight: bold
     size: 13px
   text-shadow: 0 1px 1px white
+
+img.loading
+  width: 200px
+  height: 200px
 
 body
   background-color: $bgcolor
@@ -28,7 +36,6 @@ a
   color: #666
 a:hover
   color: black
-  text-shadow: 0 0 3px white
   text-decoration: none
 
 .padded-top
@@ -131,7 +138,9 @@ table#display
       
       
 table#point
-  margin-top: 1em
+  margin:
+    top: 1em
+    left: 1em
   td
     vertical-align: top
     padding: .25em
@@ -139,38 +148,36 @@ table#point
       border:
         radius: 5px
         width: 1px
-        color: darken( $background, 30% )
+        color: desaturate( darken( $tan, 25% ), 20% )
         style: solid
       font:
         family: 'Verdana'
         size: 10pt
-        color: darken( $background, 50% )
+        color: $text
       background:
-        color: $background
-      padding: 3px
+        color: $tan
+      padding: 2px 6px
     select
       border:
         top-right-radius: 0px
         bottom-right-radius: 0px
       padding-left: 0
-      
+    &.submit
+      color: #aaa
+      font:
+        size: 11px
+      vertical-align: middle
+
 table#admin
   border-collapse: collapse
-  background-color: $background
+  background-color: $tan
   margin: 1em
   width: 80%
   &.just-added tr:first-child
-    background-color: darken( $background, 15% )
-    td:first-child
-      border-left: 2px solid orange
-  &.just-added tr:nth-child(2)
-    background-color: darken( $background, 5% )
-    td:first-child
-      border-left: 2px solid darken( $background, 5% )
-  &.just-added tr:nth-child(3)
-    background-color: $background
-    td:first-child
-      border-left: 2px solid $background
+    background-color: $green
+    td
+      &:first-child
+        border-left-color: desaturate( darken( $green, 25% ), 15% )
     
   th
     background-color: white
@@ -179,16 +186,13 @@ table#admin
   td
     padding: 6px 12px
     border-top: 2px solid white
-    color: #666
+    color: $text
     
     &:first-child
-      border-left: 2px solid darken( $background, 15% )
+      border-left: 2px solid darken( $tan, 15% )
       white-space: nowrap
-    &:nth-child(2)
-      color: #333
     &.stars
       border-left: 2px dotted white
-      color: #999
     &.stars, &.created_at
       text-align: right
       white-space: nowrap

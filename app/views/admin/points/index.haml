@@ -3,7 +3,7 @@
 %strong= link_to 'Give stars!', new_admin_point_path
 
 %table#admin
-  - @points.sort_by{|p| p['created_at']}.reverse.each do |point|
+  - @points.each do |point|
     %tr
       %td.participant= point.participant.name
       %td.pointtype= point.point_type.name
@@ -13,5 +13,5 @@
       %td.admin= link_to 'view', [:admin,point]
       %td.admin= link_to 'edit', edit_admin_point_path(point)
       %td.admin= link_to 'destroy', 'points/'+point.id.to_s+'/destroy'
-      
+
 %strong= link_to 'Give stars!', new_admin_point_path

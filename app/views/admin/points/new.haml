@@ -1,16 +1,8 @@
 %h2 Give stars
 %p#notice= notice
-= link_to '◄ Previous page', admin_points_path
 
 = render 'form'
 
-%h3.padded-top Just added:
-
 %table#admin.just-added
-  - @points.sort_by{|p| p['created_at']}.reverse.each do |point|
-    %tr
-      %td.participant= point.participant.name
-      %td.pointtype= point.point_type.name
-      %td.description= point.description
-      %td.stars== #{point.point_type.value} stars at
-      %td.created_at= point.created_at.strftime( "%H:%M:%S %b %d" )
+
+= link_to '◄ Back to Points', admin_points_path

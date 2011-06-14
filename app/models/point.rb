@@ -9,7 +9,8 @@ class Point < ActiveRecord::Base
       where a.point_type_id = b.id
       group by (a.participant_id)"
     {}.tap do |points|
-      Point.find_by_sql( sql ).each{ |point| points[point.participant_id] = point.points }
+      Point.find_by_sql( sql ).each{
+         |point| points[point.participant_id] = point.points }
     end
   end
   

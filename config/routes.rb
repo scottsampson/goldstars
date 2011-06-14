@@ -1,6 +1,8 @@
 Goldstars::Application.routes.draw do
   
   namespace :admin do
+    match 'points/justadded' => 'points#justadded'
+    match 'points/:id/destroy' => 'points#destroy'
     resources :awards
     resources :award_types
     resources :points
@@ -8,8 +10,6 @@ Goldstars::Application.routes.draw do
     resources :roles
     resources :participants
     root :to => "points#index"
-    
-    match 'points/:id/destroy' => 'points#destroy'
   end
   
   match 'points/rules' => 'points#rules'
